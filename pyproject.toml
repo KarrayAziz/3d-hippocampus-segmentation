@@ -1,0 +1,22 @@
+[project]
+name = "hippocampus-data-exploration"
+version = "0.1.0"
+description = "Beginner-friendly exploration of the MSD Task04 Hippocampus dataset"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ipykernel>=7.2.0",
+    "matplotlib>=3.10.8",
+    "nbclient>=0.10.4",
+    "nbformat>=5.10.4",
+    "nibabel>=5.4.2",
+    "numpy>=2.4.3",
+    "torch==2.11.0",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
